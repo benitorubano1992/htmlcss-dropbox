@@ -1,0 +1,272 @@
+/* reset */
+* {margin:0;
+    padding:0;
+    box-sizing: border-box;    
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+}
+
+
+
+/* common */
+.flex{
+    display:flex;
+}
+ul{
+    list-style-type: none
+    
+}
+ ul li{
+    display:inline-block;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.container{
+    width:70%;
+    margin:0 auto;
+}
+
+/* header */
+
+/* header-top */
+.header-top{
+    height:100px;
+    background-color: red;
+}
+
+.header-top .row{
+    height:100%;
+    justify-content:space-between;
+}
+.header-top .col{
+    width:30%;
+    height:100%;
+    background-color: green;
+}
+.header-top ul li{
+   
+        display:inline-block;
+}
+/* header-bottom start*/
+
+.header-bottom{
+    min-height:400px;
+    background-color: rgba(180,208,231,100%);
+    padding-top: 30px;
+}
+.header-bottom .contenitore{
+    
+    width:70%;
+    margin:2rem auto 0;
+    background-color: darkorange;
+    height: 350px;/* debug*/
+}
+.contenitore .riga{
+    height:80px;
+    background-color: blueviolet;
+}
+
+.header-bottom .row{
+    height:calc(100% - 80px);
+}
+
+.header-bottom .contenitore .col:nth-of-type(1){
+    width:30%;
+    background-color: red;
+    height:100%;/* impostazione base layout da rimuovere*/
+}
+.header-bottom .contenitore .col:nth-of-type(2){
+    width:70%;
+    height:100%;/* impostazione base layout da rimuovere*/
+    background-color: blue;
+}
+
+
+/* main */
+
+/* prima sezione main abbonameto */
+main .abbonamento{
+    min-height:400px;/*debug*/
+    padding:2rem 0;   
+    background-color:yellow;
+
+}
+.abbonamento .container{
+    height:300px;/* debug impostazione solo di layout*/
+    background-color:pink;
+    padding-top:2rem;
+
+
+}
+.row{
+    height:100%;/* debug*/
+    justify-content: space-between;
+
+}
+.abbonamento .row .col{
+   width:calc(100% / 3 - 20px);
+    border:2px solid black;
+    background-color: chartreuse;
+}
+/* fine prima sezione main */
+
+/* inizio seconda sezione del main */
+main section:nth-of-type(2){
+    height:100px;/* debug*/
+    background-color: grey;
+}
+main section:nth-of-type(2) .container{
+    height:100%;
+    background-color: brown;
+}
+/* fine seconda sezione main */
+
+/* inizio terza sezione main */
+
+main .partner{
+    height:300px;/* debug*/
+    background-color: aquamarine;
+    padding:1rem 0;
+}
+
+.patner .container{
+    height:200px; /* debug*/
+    background-color: cadetblue;
+}
+
+
+
+.partner .container .col.big{
+    width:60%;
+    background-color: darkcyan;
+    height:200px;
+
+}
+.partner .container .col.small{
+    width:40%;
+   background-color: blueviolet;
+    height:200px;/* debug*/
+}
+/*  inizio sezione main griglia */
+.griglia{
+    background-color: yellowgreen;
+    height:400px;/* debug*/
+
+}
+
+.griglia .row{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container{
+    height:100%;/* debug*/
+    background-color: rebeccapurple;
+
+}
+.griglia .row .col{
+    width:calc(100% / 3 - 10px);
+    /*height:75px;*/
+    margin-bottom:1rem;
+    border:2px solid green;
+}
+/*fine sezione griglia*/
+
+/* sezione commento*/
+section.comment{
+    height:100px;/* debug*/
+    background-color: burlywood;
+
+}
+.comment .container{
+    min-height:50%;/* debug*/
+    background-color: tomato;
+ }
+/* sezione griglia immagini*/
+.section.image{
+    background-color: aqua;
+    min-height: 300px;
+}
+
+.image .row .col{
+    width:calc(100% / 3);
+    background-color: crimson;
+    height:300px;
+    border:2px solid black;
+}
+/* griglia interna alle colonne interne alla sezione immagini */
+.row-intern{
+    background-color: darkmagenta;    
+    height:100%;
+    flex-wrap: wrap;
+}
+.row-intern .square{
+    width:50%;
+    height:50%;
+    color:red;
+    border:2px dashed green
+}
+
+/* sezione prova gratuita */
+main section.free{
+    height:200px;/* debug*/
+    background-color: rgba(180,208,231,100%);
+    padding:2rem 0;
+}
+.conatiner{
+    min-height:50%;
+    background-color: darkblue;
+}
+/*sezione domande frequenti*/
+main section.questions{
+    height:300px;/*debug*/
+    background-color: grey;
+    padding:2rem 0;
+}
+.questions .container{
+    background-color: violet;
+    height:150px;
+}
+/* fine sezione domande frequenti */
+
+/* fine main */
+
+/* footer */
+
+footer{
+    background-color: cornflowerblue;
+    height:400px;/*debug*/
+    padding:2rem 0 1rem;
+}
+
+/* footer-top */
+
+.footer-top{
+    /* height:250px;debug*/
+    background-color: red;
+}
+
+.footer-top .col {
+    width:calc(100% / 5);
+    height:250px;
+    background-color: yellowgreen;
+    border:2px dashed black
+}
+/* footer-top */
+
+/* footer-bottom */
+
+.footer-bottom{
+    height:100px;/* debug*/
+    background-color: tomato;
+}
+.footer-bottom .container{
+    height:50px;
+    background-color:red;
+}
+/* fine footer bottom*/
+
+/* fine footer*/
