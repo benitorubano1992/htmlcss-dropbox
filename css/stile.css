@@ -18,7 +18,7 @@ ul{
     list-style-type: none
     
 }
- ul li{
+ ul li:not(.footer-top .col ul li){
     display:inline-block;
 }
 a{
@@ -26,7 +26,7 @@ a{
     color:inherit;
 }
 .container{
-    width:70%;
+    width:65%;
     margin:0 auto;
 }
 
@@ -47,6 +47,20 @@ a{
 
 main img{
     max-width:100%;
+}
+
+.iper-text{
+    text-decoration: underline;
+    color: blue;
+}
+.align-verticale{
+    align-items: center;
+}
+.align-orizzontale{
+    justify-content:space-between;
+}
+.bordo-inf{
+    border-bottom:1px solid black;
 }
 /* header */
 
@@ -265,9 +279,9 @@ main .partner{
 
 /*  inizio sezione main griglia */
  section.griglia{
-    background-color: yellowgreen;
-    height:400px;/* debug*/
-
+   /* background-color: yellowgreen; debug da eliminare in revisione*/
+    /*min-height:400px; debug*/
+    padding-top:1.7rem;
 }
 
 .griglia .row{
@@ -275,73 +289,179 @@ main .partner{
     flex-wrap: wrap;
 }
 .container{
-     height:100%;
+     /*height:100%;*/
     /*background-color: rebeccapurple;*/
 
 }
 .griglia .row .col{
     width:calc(100% / 3 - 10px);
-    height:75px;
+    /*height:75px;*/
     margin-bottom:1rem;
-    border:2px solid green;
+    /*border:2px solid green; debug da eliminare in fasse di revisione*/
 }
 /*fine sezione griglia*/
 
 /* sezione commento*/
 section.comment{
-    height:100px;/* debug*/
-    background-color: burlywood;
-
+    /*height:100px;/* debug*/
+    /*background-color: burlywood; debug da eliminare in fase di revisione*/
+    margin-bottom: 2.5rem;
 }
 .comment .container{
-    min-height:50%;/* debug*/
-    background-color: tomato;
- }
-/* sezione griglia immagini*/
-.section.image{
-    background-color: aqua;
-    min-height: 300px;
+   /* min-height:50%; debug da eliminare
+    background-color: tomato;*/
+    padding-top:2rem;
 }
+section.comment .contenuto-testuale{
+    width:50%;
+}
+
+
+
+
+/* sezione griglia immagini*/
+section.image{
+    
+    
+    /*background-color: aqua; debug*/
+    
+}
+
+.image.row{
+    
+}
+
+.image .row .col:nth-of-type(2){
+    padding:1.5rem;
+}
+
 
 .image .row .col{
     width:calc(100% / 3);
-    background-color: crimson;
-    height:300px;
-    border:2px solid black;
+    /*background-color: crimson;*/
+    height:calc(100vw / 3);
+    /*border:2px solid black;*/
 }
 /* griglia interna alle colonne interne alla sezione immagini */
 .row-intern{
-    background-color: darkmagenta;    
+    /*background-color: darkmagenta;*/    
     height:100%;
     flex-wrap: wrap;
 }
 .row-intern .square{
     width:50%;
     height:50%;
-    color:red;
-    border:2px dashed green
+    /*color:red;
+    border:1px solid black;*/
 }
+
+
+.col:nth-of-type(1) .row-intern .square:nth-of-type(1){
+    background-color: #d1e9cd;
+}
+.col:nth-of-type(1) .row-intern .square:nth-of-type(1) .card.first{
+    height:95%;
+    width:95%;
+   margin:0 auto;
+    background-color: #a2d39b;;
+}
+
+.col:nth-of-type(1) .row-intern .square:nth-of-type(1) .card.first .card-image{
+    width:50%;
+    margin:0 auto;
+}
+
+.col:nth-of-type(1) .row-intern .square:nth-of-type(2){
+    background-color: rgba(97, 8, 43, 100%);
+}
+
+.col:nth-of-type(1) .row-intern .square:nth-of-type(3) {
+    background-color: rgba(0, 147, 206, 100%);
+   
+
+}
+
+.col:nth-of-type(1) .row-intern .square:nth-of-type(4){
+    background-color: rgba(255, 28, 28, 100%);
+}
+
+
+.image .col:nth-of-type(2) {
+    background-color: rgba(245,245,245,100%);
+    overflow-y: auto;
+}
+.image .col:nth-of-type(2) .image-card.mt{
+    width:50%;
+}
+.col:nth-of-type(odd) .row-intern .square .card:not(.first){
+    width:50%;
+    margin:0 auto;
+}
+
+.col:nth-of-type(3) .row-intern .square:nth-of-type(1){
+    background-color: rgba(213,0,31,100%);
+}
+.col:nth-of-type(3) .row-intern .square:nth-of-type(2){
+    background-color: rgba(180, 208, 231, 100%);
+}
+.col:nth-of-type(3) .row-intern .square:nth-of-type(3){
+    background-color: rgba(13, 36, 129, 100%);
+}
+.col:nth-of-type(3) .row-intern .square:nth-of-type(4){
+    background-color: rgba(255, 216, 48, 100%);
+}
+
+
+
+
+
+
+
 
 /* sezione prova gratuita */
 main section.free{
-    height:200px;/* debug*/
+    height:calc(100vw / 6);/* debug*/
     background-color: rgba(180,208,231,100%);
     padding:2rem 0;
+    margin-bottom:2.5rem;
 }
-.conatiner{
-    min-height:50%;
-    background-color: darkblue;
+main section.free .container{
+    
+    /*background-color: darkblue;*/
 }
+
+main section.free .contenuto h2 {
+    width:50%;
+    font-size:2rem;
+    color: #61082b;
+}
+main section.free .contenuto a.pt{
+    background-color: white;
+    color:black;
+    padding:0.5em 0.9em;
+}
+
 /*sezione domande frequenti*/
 main section.questions{
-    height:300px;/*debug*/
-    background-color: grey;
+    /*min-height:300px;debug
+    background-color: grey;*/
     padding:2rem 0;
 }
 .questions .container{
-    background-color: violet;
-    height:150px;
+    /*background-color: violet;*/
+    /*min-height:150px;*/
 }
+section.questions .titolo-domande h2{
+    margin-bottom:2rem;
+
+}
+section.questions .domande .corpo {
+    padding-right:0.3em;
+    line-height: 3;
+}
+
+
+
 /* fine sezione domande frequenti */
 
 /* fine main */
@@ -349,35 +469,52 @@ main section.questions{
 /* footer */
 
 footer{
-    background-color: cornflowerblue;
-    height:400px;/*debug*/
+    
+    
+    margin-top:2rem;
+    background-color: black;
+    color:white; 
     padding:2rem 0 1rem;
 }
 
 /* footer-top */
 
 .footer-top{
-    /* height:250px;debug*/
-    background-color: red;
+    /* height:250px;
+    background-color: red;debug*/
 }
 
 .footer-top .col {
     width:calc(100% / 5);
-    height:250px;
+    /*min-height:250px;
     background-color: yellowgreen;
-    border:2px dashed black
+    border:2px dashed black;*/
+   
 }
+.footer-top .col:nth-of-type(1){
+    border-bottom:1px solid white;
+}
+
+
+.footer-top .col ul li:last-of-type{
+    margin-bottom:5rem;
+
+}
+
+
+
 /* footer-top */
 
 /* footer-bottom */
 
 .footer-bottom{
-    height:100px;/* debug*/
-    background-color: tomato;
+   /* height:100px; debug
+    background-color:violet;*/
 }
 .footer-bottom .container{
-    height:50px;
-    background-color:red;
+    /*height:50px;
+        background-color:red;debug*/
+    padding-top:1.5rem;
 }
 /* fine footer bottom*/
 
