@@ -77,9 +77,15 @@ main img{
 /* header-top */
 .header-top{
     height:80px;
-    /*background-color: red; debug*/
+
+    background-color:white; 
     line-height: 76px;
     padding: 0px 10px;
+    position: fixed;
+    width:100%;
+    top:0;
+    left:0;
+    margin: bottom 90px;
 }
 
 .header-top .row{
@@ -130,6 +136,7 @@ main img{
 
 .header-bottom{
     /*min-height:400px;*/
+   margin-top:90px;
     background-color: rgba(180,208,231,100%);
    padding-top:1rem;
 }
