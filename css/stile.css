@@ -48,7 +48,9 @@ a{
 .mb{
     margin-bottom:1rem;
 }
-
+.margine-sotto{
+    margin-bottom:2.2rem;
+}
 main img{
     max-width:100%;
 }
@@ -70,7 +72,13 @@ main img{
     display:block;
     text-align:center;
 }
-
+main hr{
+    width:20%;
+    border:1px dotted darkgray;
+}
+footer hr{
+    width:67%;
+}
 
 /* header */
 
@@ -86,6 +94,7 @@ main img{
     top:0;
     left:0;
     margin: bottom 90px;
+    z-index: 2;
 }
 
 .header-top .row{
@@ -136,9 +145,9 @@ main img{
 
 .header-bottom{
     /*min-height:400px;*/
-   margin-top:90px;
+   margin-top:80px;
     background-color: rgba(180,208,231,100%);
-   padding-top:1rem;
+   padding-top:1.3rem;
 }
 .header-bottom .contenitore{
     
@@ -155,6 +164,8 @@ main img{
 
 .header-bottom .row{
     /*height:calc(100% - 80px);*/
+    position:relative;
+    top:45px;
 }
 
 .header-bottom .contenitore .col:nth-of-type(1){
@@ -169,11 +180,11 @@ main img{
     /*background-color: blue;*/
 }
 .header-bottom img{
-    max-width:75%;
+    max-width:100%;
 }
 .header-bottom .row .col span{
     display: inline-block;
-    margin-bottom:1rem;
+    margin-bottom:4.5rem;
 }
 .header-bottom .row .col div i{
     font-size:1.5rem;
@@ -182,7 +193,9 @@ main img{
 
 
 /* main */
-
+main{
+    padding-top: 80px;
+}
 /* prima sezione main abbonameto */
 main .abbonamento{
    /* min-height:400px;debug*/
@@ -192,6 +205,36 @@ main .abbonamento{
 }
  /*  height:300px; debug impostazione solo di layout*/
    /* background-color:pink;*/    
+
+/*abbonamento sezione form inizio*/
+
+.abbonamento form input{
+    opacity:0;
+}
+.abbonamento label:before{
+    content:"";
+    display: inline-block;
+    height:10px;
+    width:10px;
+    border:1px solid black;
+    border-radius: 50%;
+    margin-right:5px;
+}
+
+input[type="radio"]:checked + label:before{
+    outline-color: #0061ff;
+    outline-style:solid;
+    outline-width: 5px;
+}
+
+
+
+
+/*abbonamento sezione form fine*/
+
+
+
+
 
 .abbonamento .container h3:first-child{
     font-size: 2rem;
@@ -235,13 +278,15 @@ padding: 0.6em 0;
 .abbonamento .container .col:nth-of-type(3) .second a{
     /*margin-right:1rem;*/
 }
-
+.pt:hover {
+    background-color:#00ccff ;
+}
 
 /* fine prima sezione main */
 
 /* inizio seconda sezione del main */
 section.secondary{
-    margin-top:2rem;
+    margin-top:4.5rem;
 }
 
 main .secondary .container{
@@ -274,6 +319,7 @@ main .partner{
     
    background-color: aquamarine;*/
     padding:1rem 0;
+    margin: 8rem 0;
 }
 
 .patner .container{
@@ -311,6 +357,7 @@ main .partner{
    /* background-color: yellowgreen; debug da eliminare in revisione*/
     /*min-height:400px; debug*/
     padding-top:1.7rem;
+    margin-bottom:4.5rem;
 }
 
 .griglia .row{
@@ -334,7 +381,7 @@ main .partner{
 section.comment{
     /*height:100px;/* debug*/
     /*background-color: burlywood; debug da eliminare in fase di revisione*/
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
 }
 .comment .container{
    /* min-height:50%; debug da eliminare
@@ -528,7 +575,7 @@ footer{
    
 }
 .footer-top .col:nth-of-type(1){
-    border-bottom:1px solid white;
+    /*border-bottom:1px solid white;*/
 }
 
 
