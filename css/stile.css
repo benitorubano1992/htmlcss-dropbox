@@ -34,6 +34,10 @@ a{
 .vertical{
     vertical-align: middle;
 }
+.pd{
+    padding:0.3em 0.5em;
+
+}
 .pt{
     padding:0.3em 0.5em;
     background-color:#0061ff;
@@ -350,6 +354,11 @@ main .partner{
     padding-top:4rem;
 }
 
+.partner .col.small .content a{
+    border:1px solid black;
+    display: inline-block;
+    margin-top:1.5rem;
+}
 
 
 /*  inizio sezione main griglia */
@@ -486,7 +495,9 @@ section.image{
 .col:nth-of-type(3) .row-intern .square:nth-of-type(4){
     background-color: rgba(255, 216, 48, 100%);
 }
-
+.image .col:nth-of-type(odd) img{
+    filter: invert(1);
+}
 
 
 
@@ -540,7 +551,7 @@ section.questions .domande .corpo p{
     line-height: normal;
     display:none;
 }
-section.questions .domande .corpo a:hover + p{
+section.questions .domande .corpo >div:active + p{
     display:block;
 }
 
